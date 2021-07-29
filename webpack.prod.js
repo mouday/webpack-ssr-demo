@@ -18,6 +18,29 @@ module.exports = merge(baseConfig, {
   mode: 'production',
 
   optimization: {
+    // runtimeChunk: {
+    //   name: 'runtime',
+    // },
+
+    // splitChunks: {
+
+    // },
+
+    runtimeChunk: 'single',
+
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
+
     minimizer: [
       //压缩CSS代码
       // new OptimizeCss(),
@@ -32,7 +55,7 @@ module.exports = merge(baseConfig, {
       //   //使用 SourceMaps 将错误信息的位置映射到模块
       //   // sourceMap: true,
       // }),
-      new TerserPlugin()
+      new TerserPlugin(),
     ],
   },
 
@@ -42,7 +65,6 @@ module.exports = merge(baseConfig, {
     // new webpack.DefinePlugin({
     //     DEV: JSON.stringify('production')
     // })
-
     // new CopyPlugin({
     //   patterns: [{ from: 'dist/*', to: 'public/static/dist/*' }],
     // }),

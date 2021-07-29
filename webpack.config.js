@@ -10,6 +10,8 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { log } = require('console');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 // const WriteFilePlugin = require('write-file-webpack-plugin');
 
 // 多页面入口
@@ -155,6 +157,8 @@ module.exports = {
     // new WriteFilePlugin({
     //   test: /\.html$/,
     // }),
+
+    // new BundleAnalyzerPlugin()
   ],
 
   optimization: {},
