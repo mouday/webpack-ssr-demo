@@ -24,7 +24,8 @@ module.exports = merge(baseConfig, {
 
     port: '8383',
     // liveReload: true,
-
+    open: true,
+    
     contentBase: 'dist',
     // watchContentBase: true,
 

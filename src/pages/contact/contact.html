@@ -1,14 +1,26 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>contact</title>
 </head>
+
 <body>
-    {% include 'components/footer/footer.html' %}
+
+
+    <%= require('../../components/header/header.html')() %>
 
     <div>contact</div>
-    {% include 'components/header/header.html' %}
+
+    <div><a href="index.html">index</a></div>
+
+
+    <%= require('../../components/footer/footer.html')() %>
+
 </body>
+
 </html>

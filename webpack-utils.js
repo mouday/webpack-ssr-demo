@@ -26,7 +26,7 @@ function getHtmlWebpackPlugins(entries) {
     // 每个页面生成一个html
     var plugin = new HtmlWebpackPlugin({
       // 生成出来的html文件名
-      filename: 'views/pages/' + key + '.html',
+      filename: 'views/' + key + '.html',
       // 每个html的模版，这里多个页面使用同一个模版
       template: value.replace('js', 'html'),
       // 自动将引用插入html

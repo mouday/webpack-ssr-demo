@@ -7,18 +7,21 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-   
+
 </head>
 
 <body>
-    {% include 'components/header/header.html' %}
 
-    <div>hi {{name}} , I'm ok.</div>
-    <div class="box">
-        <a href="/contact">contact</a>
-    </div>
+    <%= require('../../components/header/header.html')() %>
 
-    {% include 'components/footer/footer.html' %}
+    {{name}}
+
+    <div class="box">index</div>
+
+    <div><a href="contact.html">contact</a></div>
+
+    <%= require('../../components/footer/footer.html')() %>
+
 </body>
 
 </html>
